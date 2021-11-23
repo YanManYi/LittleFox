@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 
-    private void Start()
-    {
-        Time.timeScale = 1;
-    }
+  
     public void PlayLevel01()
     {
         SceneManager.LoadScene(1);
@@ -21,7 +18,7 @@ public class Menu : MonoBehaviour
     }
 
 
-    public void Main() { SceneManager.LoadScene(0); }
+    public void Main() { Time.timeScale = 1; SceneManager.LoadScene(0); }
     public void Continue() { gameObject.SetActive(false); Time.timeScale = 1; }
 
     public void Pause()
